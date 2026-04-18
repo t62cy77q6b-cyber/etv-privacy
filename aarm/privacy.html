@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Affordable Art Marketplace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f5f0e8;
+      --ink: #1a1612;
+      --rust: #b85c38;
+      --sage: #8a9e7e;
+      --warm-gray: #c8bfb0;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 100;
+      opacity: 0.6;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 2.5rem 0 2rem;
+      border-bottom: 1px solid var(--warm-gray);
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .wordmark {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .wordmark span { color: var(--rust); }
+
+    nav {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--warm-gray);
+    }
+
+    nav a {
+      color: var(--warm-gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--rust); }
+
+    .policy-header {
+      padding: 5rem 0 3.5rem;
+      max-width: 52ch;
+      animation: fadeUp 0.8s 0.15s ease both;
+    }
+
+    .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rust);
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 300;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--rust);
+    }
+
+    .policy-intro {
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: #5a5048;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 0 0 4rem;
+      animation: fadeUp 0.8s 0.25s ease both;
+    }
+
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--warm-gray);
+    }
+
+    .divider-text {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--warm-gray);
+      white-space: nowrap;
+    }
+
+    .sections {
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+
+    .section {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--warm-gray);
+    }
+
+    .section:last-child {
+      border-bottom: none;
+    }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rust);
+      padding-top: 0.25rem;
+    }
+
+    .section-body h2 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .section-body p {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: #6a6058;
+      margin-bottom: 1rem;
+    }
+
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .section-body ul {
+      list-style: none;
+      margin: 0.75rem 0 1rem;
+      padding: 0;
+    }
+
+    .section-body ul li {
+      font-size: 0.95rem;
+      font-weight: 300;
+      line-height: 1.65;
+      color: #6a6058;
+      padding: 0.35rem 0 0.35rem 1.5rem;
+      position: relative;
+      border-bottom: 1px solid rgba(200, 191, 176, 0.4);
+    }
+
+    .section-body ul li:last-child { border-bottom: none; }
+
+    .section-body ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--rust);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+    }
+
+    .section-body a {
+      color: var(--rust);
+      text-decoration: none;
+    }
+
+    .section-body a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-block {
+      margin-top: 4rem;
+      padding: 3rem;
+      background: rgba(200, 191, 176, 0.15);
+      border: 1px solid var(--warm-gray);
+      animation: fadeUp 0.8s 0.45s ease both;
+    }
+
+    .contact-block .eyebrow { margin-bottom: 1rem; }
+
+    .contact-block h2 {
+      font-size: 1.8rem;
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+
+    .contact-block p {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: #6a6058;
+    }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 1.25rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rust);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .contact-email:hover {
+      color: var(--rust);
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--warm-gray);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation: fadeUp 0.8s 0.55s ease both;
+    }
+
+    .footer-left {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--warm-gray);
+    }
+
+    .footer-right a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--warm-gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-right a:hover { color: var(--rust); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 680px) {
+      .section { grid-template-columns: 1fr; gap: 1.25rem; }
+      .contact-block { padding: 2rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header>
+      <a class="wordmark" href="index.html">Affordable Art <span>Marketplace</span></a>
+      <nav><a href="index.html">← Back</a></nav>
+    </header>
+
+    <div class="policy-header">
+      <p class="eyebrow">Legal</p>
+      <h1>Privacy <em>Policy</em></h1>
+      <p class="policy-intro">
+        We built AARM to connect artists and collectors — not to collect or sell your data.
+        This policy explains what we collect, why we collect it, and how it is used.
+        Last updated: April 2026.
+      </p>
+    </div>
+
+    <div class="divider"><span class="divider-text">What we collect &amp; why</span></div>
+
+    <div class="sections">
+
+      <div class="section">
+        <div class="section-label">01 — Account &amp; identity</div>
+        <div class="section-body">
+          <h2>Account information</h2>
+          <p>
+            When you create an account we collect your email address and a password
+            (hashed — we never store it in plain text). This is used solely to
+            authenticate you and to associate your activity with your account.
+          </p>
+          <p>
+            If you sign up as an artist, we also collect your display name and,
+            optionally, a bio, location, and links to your social profiles. This
+            information is displayed publicly on your artist profile.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">02 — Purchases &amp; orders</div>
+        <div class="section-body">
+          <h2>Transaction data</h2>
+          <p>
+            When you purchase an artwork we collect the following in order to
+            complete and record the transaction:
+          </p>
+          <ul>
+            <li>Your full name</li>
+            <li>Your email address</li>
+            <li>Your shipping address</li>
+            <li>Payment details (processed securely by Stripe — see below)</li>
+          </ul>
+          <p>
+            This information is stored in our database and shared with the selling
+            artist solely for the purpose of fulfilling your order and arranging
+            shipping. It is never used for advertising or sold to third parties.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">03 — Payment processing</div>
+        <div class="section-body">
+          <h2>Stripe</h2>
+          <p>
+            All payments are processed by <a href="https://stripe.com" target="_blank" rel="noopener">Stripe</a>.
+            Your full card details (card number, CVV, expiry) are entered directly
+            into Stripe's secure payment interface and are never transmitted to or
+            stored on AARM's servers.
+          </p>
+          <p>
+            Artists receive payouts via Stripe Connect. To enable payouts, artists
+            are directed to complete Stripe's identity verification process. The
+            information collected during that process (legal name, bank account
+            details, government ID where required) is collected and held by Stripe,
+            not by AARM.
+          </p>
+          <p>
+            Stripe's privacy policy is available at
+            <a href="https://stripe.com/privacy" target="_blank" rel="noopener">stripe.com/privacy</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">04 — Photo library</div>
+        <div class="section-body">
+          <h2>Photo library access</h2>
+          <p>
+            AARM requests access to your device's photo library when you upload
+            artwork images or a profile photo. This permission is used only to
+            let you select images to upload. We do not access, scan, or store
+            any photos beyond the specific image you choose to upload.
+          </p>
+          <p>
+            You can revoke photo library access at any time in your device's
+            Settings. Revoking access will prevent you from uploading new images
+            but will not affect your existing listings.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">05 — Data storage</div>
+        <div class="section-body">
+          <h2>Where your data lives</h2>
+          <p>
+            AARM uses <a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a>
+            to store application data including artist profiles, artwork listings,
+            and order records. Supabase stores data in hosted PostgreSQL databases
+            on infrastructure provided by AWS in the United States.
+          </p>
+          <p>
+            Artwork images and profile photos are stored in Supabase Storage,
+            which uses AWS S3-compatible object storage. Uploaded images are
+            accessible via public URLs for display in the app and on artist profiles.
+          </p>
+          <p>
+            Supabase's privacy policy is available at
+            <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">06 — Third parties</div>
+        <div class="section-body">
+          <h2>We do not sell your data</h2>
+          <p>
+            We do not sell, rent, trade, or otherwise transfer your personal
+            information to third parties for advertising, marketing, or any
+            commercial purpose unrelated to operating AARM.
+          </p>
+          <p>
+            The only third-party services that receive any user data are Stripe
+            (payment processing) and Supabase (data storage), as described above.
+            Both are used solely to provide the core functionality of the app.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">07 — Retention &amp; deletion</div>
+        <div class="section-body">
+          <h2>Your data, your control</h2>
+          <p>
+            You may request deletion of your account and associated data at any
+            time by contacting us at the address below. Upon request we will
+            delete your account, profile, and any personally identifiable
+            information from our systems within 30 days, except where retention
+            is required by law (for example, transaction records for tax purposes).
+          </p>
+          <p>
+            Artwork listings and order records may be retained in anonymised form
+            for platform integrity purposes after account deletion.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">08 — Changes</div>
+        <div class="section-body">
+          <h2>Updates to this policy</h2>
+          <p>
+            If we make material changes to this policy we will update the date at
+            the top of this page. Continued use of the app after changes are posted
+            constitutes acceptance of the revised policy.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contact-block">
+      <p class="eyebrow">Questions &amp; requests</p>
+      <h2>Get in <em>touch</em></h2>
+      <p>
+        For any questions about this privacy policy, to request access to your data,
+        or to request deletion of your account, contact us at:
+      </p>
+      <a class="contact-email" href="mailto:hello@aarm.app">hello@aarm.app</a>
+    </div>
+
+    <footer>
+      <div class="footer-left">© 2026 Affordable Art Marketplace</div>
+      <div class="footer-right"><a href="index.html">← Back to AARM</a></div>
+    </footer>
+
+  </div>
+</body>
+</html>

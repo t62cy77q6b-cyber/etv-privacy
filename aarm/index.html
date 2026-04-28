@@ -304,25 +304,18 @@
     .footer-right a:hover { color: var(--rust); }
 
     /* App badge placeholder */
-    .app-soon {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      background: var(--ink);
-      color: var(--cream);
-      padding: 0.6rem 1.2rem;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.6rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+    .app-store-badge {
+      display: inline-block;
       margin-top: 1.5rem;
+      transition: opacity 0.15s;
     }
 
-    .app-soon-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--rust);
+    .app-store-badge:hover { opacity: 0.85; }
+
+    .app-store-badge img {
+      height: 44px;
+      width: auto;
+      display: block;
     }
 
     /* Animations */
@@ -346,7 +339,7 @@
 
     <header>
       <a class="wordmark" href="#">Affordable Art <span>Marketplace</span></a>
-      <nav>iOS App — Coming Soon</nav>
+      <nav>Available on the App Store</nav>
     </header>
 
     <section class="hero">
@@ -356,10 +349,9 @@
         <p class="hero-desc">
           Affordable Art Marketplace connects collectors with independent artists selling original works — paintings, drawings, prints, and more — at prices that belong in homes, not just galleries.
         </p>
-        <div class="app-soon">
-          <span class="app-soon-dot"></span>
-          iOS App Coming Soon
-        </div>
+        <a class="app-store-badge" href="https://apps.apple.com/app/affordable-art-marketplace/id6762621721" target="_blank" rel="noopener">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
+        </a>
       </div>
       <div class="hero-right">
         <div class="tile-grid">

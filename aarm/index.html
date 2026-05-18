@@ -332,6 +332,18 @@
       .artist-strip { grid-template-columns: 1fr; gap: 2rem; }
       footer { flex-direction: column; gap: 1rem; text-align: center; }
     }
+
+    /* Mobile — restore artwork tiles and tune typography */
+    @media (max-width: 768px) {
+      /* Override the 680px hide so images are visible on mobile */
+      .hero-right { display: flex; }
+
+      /* Keep heading legible without horizontal overflow on narrow screens */
+      h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
+
+      /* Ensure the App Store badge meets minimum tap-target height */
+      .app-store-badge img { height: 48px; }
+    }
   </style>
 </head>
 <body>
